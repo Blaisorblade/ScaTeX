@@ -25,7 +25,7 @@ class TangleEnv(val runMode:RunMode.Value){
 	fileContentsMap = fileContentsMap + ((currentFile,currentBlock.reverse))
       }
       case Some(x) => {
-	fileContentsMap = fileContentsMap.update(currentFile,x ::: currentBlock.reverse)
+	fileContentsMap = fileContentsMap.updated(currentFile,x ::: currentBlock.reverse)
       }
     }
     currentBlock = List()
